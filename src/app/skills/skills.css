@@ -1,0 +1,18 @@
+.skills-section {
+    padding: 2rem;
+    background-color: #121212;
+}
+
+.section-title {
+    color: #f1c40f;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}

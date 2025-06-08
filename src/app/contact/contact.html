@@ -1,0 +1,12 @@
+<div class="contact-container">
+    <h2>Get in Touch</h2>
+    <p class="contact-tagline">Let's connect — whether it's for work, collaboration, or coffee in Gotham.</p>
+    <form (submit)="onSubmit()" #contactForm="ngForm" class="contact-form">
+        <input type="text" name="name" ngModel required placeholder="Your Name" />
+        <input type="email" name="email" ngModel required placeholder="Your Email" />
+        <input type="text" name="subject" ngModel required placeholder="Subject" />
+        <textarea name="message" ngModel required placeholder="Your Message"></textarea>
+        <button type="submit" [disabled]="!contactForm.valid">Send Message</button>
+    </form>
+</div>
+  

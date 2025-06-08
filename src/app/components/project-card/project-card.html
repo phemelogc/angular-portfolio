@@ -1,0 +1,11 @@
+<div class="project-card" (mouseenter)="hover = true" (mouseleave)="hover = false">
+    <img [src]="project.image" alt="{{ project.title }} image" />
+    <div class="card-content">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+    </div>
+    <div class="card-overlay" [class.show]="hover">
+        <a [href]="project.github" target="_blank">View on GitHub</a>
+    </div>
+</div>
+  
