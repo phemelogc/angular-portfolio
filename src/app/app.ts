@@ -6,6 +6,8 @@ import { Skills } from './skills/skills';
 import { Contact } from './contact/contact';
 
 
+import AOS from 'aos';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -14,16 +16,15 @@ import { Contact } from './contact/contact';
     About,
     Projects,
     Skills,
-    Contact,
-   
-],
+    Contact
+  ],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
 export class App implements OnInit {
   protected title = 'my-portfolio';
 
-  // Scroll listener for highlighting active nav link
+  // Scroll listener for highlighting active nav link and refreshing AOS
   @HostListener('window:scroll', [])
   onScroll(): void {
     const sections = document.querySelectorAll('section');
@@ -43,9 +44,12 @@ export class App implements OnInit {
         link.classList.add('active');
       }
     });
+
+    //  Refreshing AOS animations on scroll
+    AOS.refresh();
   }
 
-  // Smooth scroll on nav link click
+  // Smooth scroll and AOS init
   ngOnInit(): void {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
@@ -57,6 +61,13 @@ export class App implements OnInit {
           targetSection.scrollIntoView({ behavior: 'smooth' });
         }
       });
+    });
+
+    
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-in-out'
     });
   }
 }
