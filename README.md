@@ -1,59 +1,58 @@
-# MyPortfolio
+# 🧠 My Developer Portfolio (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
+This is my personal portfolio website built with **Angular**. It showcases my skills, projects, and contact information in a single-page format with smooth navigation and scroll animations.
 
-## Development server
+## 🔧 Technologies Used
 
-To start a local development server, run:
+- **Angular 17+** (Standalone components)
+- **HTML/CSS**
+- **AOS (Animate On Scroll)** for scroll animations
+- **TypeScript**
+- **Responsive Design** (Mobile-friendly)
+
+---
+
+## 🧭 Project Structure & Routing
+
+This project uses **Angular standalone components** for a simplified structure — no routing module required.
+
+### Main Sections
+
+Each section of the page is a standalone component:
+
+- `Home` – Welcome/landing section
+- `About` – Short bio about my background, age, goals
+- `Projects` – Showcasing my work
+- `Skills` – Technologies and tools I use
+- `Contact` – Contact form or details
+
+These are imported directly into `AppComponent` to act as a **single-page scroll site**.
+
+---
+
+## ✨ Animations with AOS
+
+I'm using **AOS (Animate On Scroll)** for adding fade-up and other smooth animations when sections enter the viewport.
+
+### Setup Summary:
+- Installed AOS via `npm install aos`
+- Imported AOS in `main.ts` and `styles.css`
+- Initialized AOS in `AppComponent`
+- Used `data-aos="fade-up"` attributes in HTML elements
+
+---
+
+## 📁 File Highlights
+
+- `app/app.ts`: Root component handling scroll-based navigation highlight, smooth scrolling, and AOS setup.
+- `about/about.html`: Contains personal summary (age, goals, career).
+- `styles.css`: Global styles + AOS animations.
+- `angular.json`: Includes AOS assets and styles in the build process.
+
+---
+
+## 🚀 How to Run
 
 ```bash
+npm install
 ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
