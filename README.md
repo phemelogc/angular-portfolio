@@ -1,58 +1,42 @@
-# 🧠 My Developer Portfolio (Angular)
+# 👨‍💻 Phemelo's Developer Portfolio (Angular)
 
-This is my personal portfolio website built with **Angular**. It showcases my skills, projects, and contact information in a single-page format with smooth navigation and scroll animations.
-
-## 🔧 Technologies Used
-
-- **Angular 17+** (Standalone components)
-- **HTML/CSS**
-- **AOS (Animate On Scroll)** for scroll animations
-- **TypeScript**
-- **Responsive Design** (Mobile-friendly)
+Welcome to my personal portfolio built using **Angular**! This project showcases who I am, the skills I’ve learned, and the projects I’ve built — all in a **clean, single-page layout**.
 
 ---
 
-## 🧭 Project Structure & Routing
+## 🛠️ Tech Stack
 
-This project uses **Angular standalone components** for a simplified structure — no routing module required.
-
-### Main Sections
-
-Each section of the page is a standalone component:
-
-- `Home` – Welcome/landing section
-- `About` – Short bio about my background, age, goals
-- `Projects` – Showcasing my work
-- `Skills` – Technologies and tools I use
-- `Contact` – Contact form or details
-
-These are imported directly into `AppComponent` to act as a **single-page scroll site**.
+- **Angular 17+**
+- **Standalone Components** (no need for traditional NgModules)
+- **HTML + CSS**
+- **AOS (Animate On Scroll)** for animations
+- **Responsive Design** for desktop and mobile
 
 ---
 
-## ✨ Animations with AOS
+## 📁 Project Structure
 
-I'm using **AOS (Animate On Scroll)** for adding fade-up and other smooth animations when sections enter the viewport.
+This portfolio is a **Single Page Application (SPA)**. Each main section is a standalone Angular component:
 
-### Setup Summary:
-- Installed AOS via `npm install aos`
-- Imported AOS in `main.ts` and `styles.css`
-- Initialized AOS in `AppComponent`
-- Used `data-aos="fade-up"` attributes in HTML elements
+- `Home` – Intro section
+- `About` – My background, goals, and who I am
+- `Projects` – List of my projects
+- `Skills` – Programming tools and tech I use
+- `Contact` – Ways to reach me
 
----
-
-## 📁 File Highlights
-
-- `app/app.ts`: Root component handling scroll-based navigation highlight, smooth scrolling, and AOS setup.
-- `about/about.html`: Contains personal summary (age, goals, career).
-- `styles.css`: Global styles + AOS animations.
-- `angular.json`: Includes AOS assets and styles in the build process.
+These components are embedded directly into `app.html` using their tags (e.g. `<app-home>`).
 
 ---
 
-## 🚀 How to Run
+## 🚀 How Routing Works
 
-```bash
-npm install
-ng serve
+While this app doesn’t use full Angular routing in the browser (like `/about`, `/projects`), I **set up `app.routes.ts`** using Angular’s route configuration system for possible future upgrades.
+
+```ts
+export const routes: Routes = [
+  // Example (currently commented out):
+  // {
+  //   path: 'projects',
+  //   loadComponent: () => import('./projects/projects').then(m => m.Projects)
+  // }
+];
