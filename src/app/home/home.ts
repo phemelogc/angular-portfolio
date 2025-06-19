@@ -21,6 +21,10 @@ export class Home implements AfterViewInit {
         typeSpeed: 70,
         deleteSpeed: 50,
         pauseSpeed: 1200,
+        cursorColor: '#eaff4d', 
+        cursorAnimation: 'blink', 
+        typeColor: '#eaff4d',
+        
       });
 
       writer
